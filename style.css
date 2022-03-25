@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  text-decoration: none;
+  padding-left: 1rem;
+}
+
+img {
+  width: 50px;
+}
+
+main {
+  color: white;
+}
+
+body {
+  background: #2e2d2d;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #ffffff;
+}
+
+.list {
+  display: flex;
+}
+
+.container {
+  text-align: center;
+  margin-top: 200px;
+}
