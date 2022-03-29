@@ -11,6 +11,8 @@ ul {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+  color: #777676;
 }
 
 li {
@@ -18,8 +20,16 @@ li {
   padding-left: 1rem;
 }
 
+button {
+  padding: 5px;
+  width: 100px;
+  background: #777676;
+  color: white;
+}
+
 img {
   width: 50px;
+  margin-top: 10px;
 }
 
 main {
@@ -41,7 +51,121 @@ body {
   display: flex;
 }
 
-.container {
+/*
+
+Login / Sign Up 
+
+*/
+
+.login__container {
   text-align: center;
   margin-top: 200px;
+}
+
+.welcome {
+  margin-bottom: 30px;
+}
+
+.google {
+  margin-top: 30px;
+}
+
+.textBox {
+  margin-top: 20px;
+}
+
+#textBox {
+  display: flex;
+  border-radius: 10px;
+  padding: 20px;
+  width: 350px;
+  background: #777676;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottomRight {
+  text-align: right;
+  margin-right: 25em;
+  font-size: 20px;
+}
+
+.bottomRight2 {
+  text-align: right;
+  margin-right: 30em;
+  font-size: 20px;
+}
+
+/*
+
+Create
+
+*/
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 200px;
+}
+
+.create__container {
+  border-style: solid;
+  width: 900px;
+  height: 400px;
+  background: white;
+  color: black;
+}
+
+.profile {
+  background: #b6b1b1;
+  padding: 5px 0 10px 15px;
+}
+
+.middle {
+  margin-left: 250px;
+}
+
+.create__wrapper {
+  display: flex;
+  padding: 10px;
+}
+
+.bottomRight3 {
+  text-align: right;
+  margin-right: 17em;
+  font-size: 20px;
+  color: white;
+  font-size: 30px;
+}
+
+/*
+
+Profile
+
+*/
+
+.yourProfile {
+  display: flex;
+  justify-content: space-between;
+  background: #b6b1b1;
+  padding: 15px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 70px 0;
+  text-align: center;
+}
+
+.post__pic {
+  margin-right: 300px;
+  margin-top: 70px;
+}
+
+.post__cap {
+  margin-top: 70px;
 }
