@@ -13,22 +13,25 @@
     <nav class="nav">
         <h1>**APP NAME**</h1>
         <ul class="list">
-            <li><a href="./login.html">Login</a> </li>
-            <li><a href="./home.html">Home</a></li>
-            <li><a href="./create.html">Create</a></li>
-            <li><a href="./profile.html">Profile</a></li>
+            <li><a href="./login">Login</a> </li>
+            <li><a href="./home">Home</a></li>
+            <li><a href="./create">Create</a></li>
+            <li><a href="./profile">Profile</a></li>
         </ul>
     </nav>
     <main>
         <div class="login__container">
             <h1 class="welcome">Welcome Back</h1>
-            <input type="text" placeholder="Username" class="textBox" id="textBox">
-            <input type="text" placeholder="Password" class="textBox" id="textBox">
+        <form action="/login" method="post">
+            <input type="text" placeholder="Username" class="textBox" id="textBox" name="username">
+            <input type="password" placeholder="Password" class="textBox" id="textBox" name="password">
+            <button type="submit">Log In  🠮</button>
+        </form>
             <p class="google">⎯⎯⎯⎯ Or Login With Google ⎯⎯⎯⎯</p>
             <img src="./logo.png" alt="">
         </div>
         <div>
-            <p class="bottomRight">New here? <a href="signup.html">Signup 🠮</a></p>
+            <p class="bottomRight">New here? <a href="signup">Signup 🠮</a></p>
         </div>
     </main>
 </body>
