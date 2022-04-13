@@ -66,11 +66,13 @@ def post_login():
 
         result = Account.query.filter(Account.username == user, Account.password == passwd).first()
         if not result == None:
-            #Invalid username or password
-            #TODO: Show invalid username or password on HTML
+            #Successful login
+            #TODO: Save session in browser
 
             print("Successful login")
         else:
+            #Invalid username or password
+            #TODO: Show invalid username or password on HTML
             print("Invalid login - username or password is incorrect")
 
     return render_template("login.html")
