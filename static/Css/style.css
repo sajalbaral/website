@@ -45,10 +45,32 @@ body {
   justify-content: space-between;
   padding: 1rem 2rem;
   background: #ffffff;
+  margin:auto;
+  vertical-align: auto;
 }
 
 .list {
   display: flex;
+}
+
+/* upper bar for home page posts */
+.yourHome {
+  display: flex;
+  justify-content: space-between;
+  background: #b6b1b1;
+  padding: 15px;
+  font-family: Georgia;
+  font-size: small;
+}
+
+.feed {
+  position: absolute;
+  width: 100%;
+  text-align:center;
+  top: 175px;
+  color:whitesmoke;
+  font-family: Georgia;
+  background: #2e2d2d;
 }
 
 /*
@@ -67,11 +89,19 @@ Login / Sign Up
 }
 
 .google {
+  font-family: Georgia;
   margin-top: 30px;
 }
 
 .textBox {
   margin-top: 20px;
+}
+
+::placeholder{
+  font-family: Georgia;
+  color: lightgrey;
+  font-size: 15px;
+  
 }
 
 #textBox {
@@ -83,11 +113,20 @@ Login / Sign Up
   color: white;
   margin-left: auto;
   margin-right: auto;
+  border-color: lightgrey;
+  border-style: 3px double;
+}
+
+.button {
+  font-family: Georgia;
+  border-radius: 8px;
+  margin-top: 10px;
+  border-color: lightgrey;
+  border-style: 3px double;
 }
 
 .bottomRight {
-  text-align: right;
-  margin-right: 25em;
+  text-align: center;
   font-size: 20px;
 }
 
@@ -103,6 +142,16 @@ Create
 
 */
 
+.yourCreate {
+  position: absolute;
+  width: 100%;
+  text-align:center;
+  top: 175px;
+  color:whitesmoke;
+  font-family: Georgia;
+  background: #2e2d2d;
+  }
+
 .main {
   display: flex;
   justify-content: center;
@@ -116,11 +165,15 @@ Create
   height: 400px;
   background: white;
   color: black;
+  font-family: Georgia;
 }
 
 .profile {
+  display: flex;
+  justify-content: space-between;
   background: #b6b1b1;
-  padding: 5px 0 10px 15px;
+  padding: 15px;
+  font-size: small;
 }
 
 .middle {
@@ -130,14 +183,13 @@ Create
 .create__wrapper {
   display: flex;
   padding: 10px;
+  font-size:smaller;
 }
 
 .bottomRight3 {
-  text-align: right;
-  margin-right: 17em;
-  font-size: 20px;
+  text-align: center;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 /*
@@ -147,10 +199,21 @@ Profile
 */
 
 .yourProfile {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 175px;
+  color: whitesmoke;
+  font-family: Georgia;
+}
+
+.yourPost {
   display: flex;
   justify-content: space-between;
   background: #b6b1b1;
   padding: 15px;
+  font-family: Georgia;
+  font-size: small;  
 }
 
 .flex {
@@ -159,13 +222,72 @@ Profile
   align-content: center;
   padding: 70px 0;
   text-align: center;
+  font-family: Georgia;
 }
 
 .post__pic {
   margin-right: 300px;
   margin-top: 70px;
+  font-family: Georgia;
 }
 
 .post__cap {
   margin-top: 70px;
+  font-family: Georgia;
 }
+
+/*
+  
+  edit
+  
+  */
+  .yourEdit {
+    position: absolute;
+    width: 100%;
+    text-align:center;
+    top: 175px;
+    color:whitesmoke;
+    font-family: Georgia;
+    background: #2e2d2d;
+    }
+    
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 200px;
+  }
+  
+  .create__container {
+    border-style: solid;
+    width: 900px;
+    height: 400px;
+    background: white;
+    color: black;
+    font-family: Georgia;
+  }
+  
+  .profileEdit {
+    display: flex;
+    justify-content: space-between;
+    background: #b6b1b1;
+    padding: 15px;
+    font-size: small;
+  }
+  
+  .middle {
+    margin-left: 250px;
+  }
+  
+  .create__wrapper {
+    display: flex;
+    padding: 10px;
+    font-size:smaller;
+  }
+  
+  .bottomRight3 {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+  }
