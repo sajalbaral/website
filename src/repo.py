@@ -5,7 +5,7 @@ def get_account_by_login(username, password):
     return result
 
 def get_account_by_username(username):
-    result = Account.query.filter(Account.username == username, Account.password == password).first()
+    result = Account.query.filter(Account.username == username).first()
     return result
 
 def get_account_by_id(id):

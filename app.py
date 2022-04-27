@@ -1,3 +1,4 @@
+from pickle import TRUE
 from flask import Flask, redirect, render_template, request, flash, session
 
 from src.connection import Account
@@ -7,31 +8,47 @@ from src.repo import get_account_by_username, get_account_by_login, get_account_
 app = Flask(__name__)
 app.secret_key = 'secret-key'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:password@localhost:3306/test'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:NickyNicky@localhost:3306/test'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
 
 db.init_app(app)
+@app.get('/')
+def index():
+    if not 'user_id' in session:
+        return redirect('/login')
+    else:
+        return redirect('/home')
 
 @app.get('/home')
 def home():
-    Account.query.all()
-    return render_template("home.html", nav = get_nav_data())
+    if not 'user_id' in session:
+        return redirect('/login')
+    User = get_account_by_id(session['user_id'])
+    return render_template("home.html", nav = get_nav_data(), usr = User)
 
 @app.get('/create')
 def create():
+    if not 'user_id' in session:
+        return redirect('/login')
     return render_template("create.html", nav = get_nav_data())
 
 @app.get('/login')
 def login():
+    if 'user_id' in session:
+        return redirect('/home')
     return render_template("login.html", nav = get_nav_data())
 
 @app.get('/profile')
 def profile():
+    if not 'user_id' in session:
+        return redirect('/login')
     return render_template("profile.html", nav = get_nav_data())
 
 @app.get('/signup')
 def signup():
+    if 'user_id' in session:
+        return redirect('/home')
     return render_template("signup.html", nav = get_nav_data())
 
 @app.post('/signup')
@@ -86,11 +103,12 @@ def logout():
 
 def get_nav_data():
     nav_links = {}
-    nav_links['Home'] = 'home'
     if not 'user_id' in session:
         nav_links['Login'] = 'login'
     else:
+        nav_links['Home'] = 'home'
         nav_links['Create'] = 'create'
         nav_links['Profile'] = 'profile'
         nav_links['Logout'] = 'logout'
     return nav_links
+
