@@ -11,11 +11,13 @@
 
 <body>
     <nav class="nav">
-        <h1>FacePalm</h1>
+        <h1>FacePalm &#9786</h1>
         <ul>
-            {% for key, value in nav.items() %}
-            <li><a href="{{value}}">{{key}}</a></li>
-            {% endfor %}
+            <li><a href="./login">Login</a> </li>
+            <li><a href="./home">Home</a></li>
+            <li><a href="./create">Create</a></li>
+            <li><a href="./profile">Profile</a></li>
+            <li><a href="./edit">Edit</a></li>
         </ul>
     </nav>
     <main>
@@ -25,10 +27,8 @@
                 <input type="text" placeholder="Username" class="textBox" id="textBox" name="username">
                 <input type="password" placeholder="Password" class="textBox" id="textBox" name="password">
                 <input type="text" placeholder="Your Name" class="textBox" id="textBox" name="name">
-                <button type="submit">Sign Up 🠮</button>
+                <button type="submit">Sign Up </button>
             </form>
-            <p class="google">⎯⎯⎯⎯ Or Login With Google ⎯⎯⎯⎯</p>
-            <img src="./logo.png" alt="">
         </div>
     </main>
 </body>
