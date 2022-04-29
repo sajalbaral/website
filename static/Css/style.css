@@ -192,6 +192,22 @@ Create
   font-size: 25px;
 }
 
+#createTextBox
+{
+  height: 300px;
+  width: 450px;
+}
+
+::placeholder {
+  text-align: left ;
+  color: #2e2d2d;
+  font-family:Georgia;
+}
+
+.btn{
+  text-align: center;
+  font-family:Georgia;
+}
 /*
 
 Profile
