@@ -1,7 +1,7 @@
 from pickle import TRUE
 from flask import Flask, redirect, render_template, request, flash, session
-
-from src.connection import Account
+import datetime
+from src.connection import Account, Post
 from src.connection import db
 from src.repo import get_account_by_username, get_account_by_login, get_account_by_id
 
@@ -32,6 +32,24 @@ def create():
     if not 'user_id' in session:
         return redirect('/login')
     return render_template("create.html", nav = get_nav_data())
+
+@app.post('/post')
+def post():
+    if not 'user_id' in session:
+        return redirect('/login')
+
+    if 'Photo' in request.form and 'caption' in request.form:
+        Photo = request.form.get('Photo')
+        caption = request.form.get('caption')
+        x = datetime.datetime.now()
+        print(Photo)
+        print(caption)
+        new_post = Post( photo_link=Photo, account_id=session['user_id'], caption=caption, date_posted=x)
+        db.session.add(new_post)
+        db.session.commit()
+
+
+    return render_template("profile.html", nav = get_nav_data())
 
 @app.get('/login')
 def login():
@@ -75,7 +93,7 @@ def post_signup():
         else:
             print("Could not create new user account because username is already taken")
 
-    return render_template("signup.html", nav = get_nav_data())
+    return render_template("/login", nav = get_nav_data())
 
 @app.route('/login', methods=['GET', 'POST'])
 def post_login():

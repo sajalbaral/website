@@ -13,6 +13,6 @@ class Account(db.Model):
 class Post(db.Model):
     post_id = db.Column(db.Integer, primary_key=True)
     account_id = db.Column(db.Integer, nullable=False)
-    #TODO: add photo field, don't know how to do that yet :(
+    photo_link = db.Column(db.String)
     caption = db.Column(db.String, nullable=False)
-    date_posted = db.Column(db.DateTime, nullable=False)
+    date_posted = db.Column(db.String, nullable=False)

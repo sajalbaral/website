@@ -11,6 +11,8 @@ CREATE TABLE post (
 	post_id INT auto_increment,
     account_id INT NOT NULL,
     caption VARCHAR(255) NOT NULL,
-    date_posted datetime NOT NULL,
-    primary key (post_id)
+    photo_link VARCHAR(255),
+    date_posted VARCHAR(255) NOT NULL,
+    primary key (post_id),
+    FOREIGN KEY (account_id) REFERENCES account(id)
 );

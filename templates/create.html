@@ -13,11 +13,11 @@
     <nav class="nav">
         <h1>FacePalm &#9786</h1>
         <ul>
-            <li><a href="./login">Login</a> </li>
-            <li><a href="./home">Home</a></li>
-            <li><a href="./create">Create</a></li>
-            <li><a href="./profile">Profile</a></li>
-            <li><a href="./edit">Edit</a></li>
+            <ul>
+                {% for key, value in nav.items() %}
+                <li><a href="{{value}}">{{key}}</a></li>
+                {% endfor %}
+            </ul>
         </ul>
     </nav>
     <h1 class="yourCreate">Create your post &#9786</h1>
@@ -28,10 +28,10 @@
             </div>
             <div class="create__wrapper">
                 <div class="border__right">
-                    <form>
-                        <textarea name="textarea" rows="1" cols="50" class="form-control" input id="createTextBox" > Choose a Photo </textarea>
+                    <form action="/post" method="post">
+                        <textarea name="Photo" rows="1" cols="50" class="form-control" input id="createTextBox" > Choose a Photo </textarea>
                       </div>
-                        <textarea name ="textarea" rows = "10" cols= "50" class="form-control" input id="createTextBox" > Tell us about your day </textarea>
+                        <textarea name ="caption" rows = "10" cols= "50" class="form-control" input id="createTextBox" > Tell us about your day </textarea>
                 </div>
             </div>
         </div>

@@ -13,11 +13,11 @@
     <nav class="nav">
         <h1>FacePalm &#9786</h1>
         <ul>
-            <li><a href="./login">Login</a> </li>
-            <li><a href="./home">Home</a></li>
-            <li><a href="./create">Create</a></li>
-            <li><a href="./profile">Profile</a></li>
-            <li><a href="./edit">Edit</a></li>
+            <ul>
+                {% for key, value in nav.items() %}
+                <li><a href="{{value}}">{{key}}</a></li>
+                {% endfor %}
+            </ul>
         </ul>
     </nav>
     <main>
