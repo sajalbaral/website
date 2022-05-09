@@ -20,22 +20,29 @@
             </ul>
         </ul>
     </nav>
+    {% for message in messages %}
+    <script>
+        alert(message)
+    </script>
+    {% endfor %}
     <h1 class="yourProfile">Your Page &#9786</h1>
     <main class="main">
+        {% for post in posts %}
         <div class="create__container">
             <div class="yourPost">
-                <h2>Date Posted</h2>
-                <h2><li><a href="./edit">Edit Post</a></li></h2>
+                <h2>{{post.date_posted}}</h2>
+                <h2><li><a href="./edit/{{post.post_id}}">Edit Post</a></li></h2>
             </div>
             <div class="flex">
                 <div class="post__pic">
-                    <h3>POST PICTURE</h3>
+                    <img src="{{post.photo_link}}">
                 </div>
                 <div class="post__cap">
-                    <h3>POST CAPTION</h3>
+                    <h3>{{post.caption}}</h3>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </main>
 </body>
 

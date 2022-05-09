@@ -20,28 +20,39 @@
             </ul>
         </ul>
     </nav>
-    <h1 class="yourEdit">Edit your post &#9786</h1>
+    <h1 class="yourCreate">Edit your post &#9786</h1>
     <main class="main">
         <div class="create__container">
-            <div class="profileEdit">
+            <div class="profile">
                 <h2>Profile Name</h2>
             </div>
             <div class="create__wrapper">
                 <div class="border__right">
-                    <form>
-                        <textarea name="textarea" rows="1" cols="50" class="form-control" input id="createTextBox" > Change your Photo </textarea>
-                    </div>
-                        <textarea name ="textarea" rows = "10" cols= "50" class="form-control" input id="createTextBox" > Edit your Caption </textarea>
+                    <form action="/edit/{{post.post_id}}" method="post">
+                        <textarea name="Photo" rows="1" cols="50" class="form-control" input id="createTextBox" > {{post.photo_link}} </textarea>
+                      </div>
+                        <textarea name ="caption" rows = "10" cols= "50" class="form-control" input id="createTextBox" > {{post.caption}} </textarea>
                 </div>
             </div>
         </div>
     </main>
     <div class = "btn">
-        <button type="submit" align-content="center">Save &#8658 </button>  
+        <button type="submit" align-content="center">Submit Changes &#8658 </button>  
+        </div>
+     </form> 
+     <div class = "btn">
+         <a href="../profile">
+        <button type="submit" align-content="center">Cancel Changes &#8658 </button>  
+    </a>        
     </div>
-    </form> 
+    <form action="/delete/{{post.post_id}}" method="post">
+    <div class = "btn">
+        <a href="../delete/{{post.post_id}}">
+       <button type="submit" align-content="center">Delete Post &#8658 </button>  
+   </a>        
+   </div>
+</form>
     <br>
-
 </body>
 
 </html>

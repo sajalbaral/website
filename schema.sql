@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS test;
-USE test;
+CREATE DATABASE IF NOT EXISTS facepalm;
+USE facepalm;
 
 CREATE table account (
 	id INT auto_increment,

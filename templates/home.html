@@ -22,20 +22,24 @@
     </nav>
     <main class="main">
         <h1 class="feed">Your Feed &#9786</h1>
+        {% for post in posts %}
+        <a href="post/{{post.post_id}}">
         <div class="create__container">
             <div class="yourHome">
-                <h2>{{ usr.username }}</h2>
+                <h2>{{ post.account.username }} | {{post.date_posted}}</h2>
             </div>
             <div class="flex">
                 <div class="post__pic">
-                    <h3>POST PICTURE </h3>
+                    <img src="{{post.photo_link}}">
                 </div>
                 <div class="post__cap">
-                    <h3>POST CAPTION</h3>
+                    <h3>{{post.caption}}</h3>
                 </div>
             </div>
         </div>
-        </man>
+        </a>    
+        {% endfor %}
+        </main>
 </body>
 
 </html>

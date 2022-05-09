@@ -154,6 +154,7 @@ Create
 
 .main {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   margin-top: 200px;
@@ -245,6 +246,10 @@ Profile
   margin-right: 300px;
   margin-top: 70px;
   font-family: Georgia;
+}
+
+.post__pic img {
+  width: 250px;
 }
 
 .post__cap {

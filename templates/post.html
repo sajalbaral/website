@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FacePalm</title>
+    <link rel="stylesheet" href="/static/Css/style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <h1>FacePalm &#9786</h1>
+        <ul>
+            <ul>
+                {% for key, value in nav.items() %}
+                <li><a href="{{value}}">{{key}}</a></li>
+                {% endfor %}
+            </ul>
+        </ul>
+    </nav>
+    <main class="main">
+        <div class="create__container">
+            <div class="yourHome">
+                <h2>{{ post.account.username }} | {{post.date_posted}}</h2>
+            </div>
+            <div class="flex">
+                <div class="post__pic">
+                    <img src="{{post.photo_link}}">
+                </div>
+                <div class="post__cap">
+                    <h3>{{post.caption}}</h3>
+                </div>
+            </div>
+        </div>
+        </main>
+</body>
+
+</html>
